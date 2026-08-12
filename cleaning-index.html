@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="الحمد كلين للنظافة والصيانة المنزلية في الأحساء. خدمات متكاملة للفلل والشقق والمكيفات والخزانات والمفروشات والأفران." />
+  <meta name="theme-color" content="#103a3e" />
+  <title>الحمد كلين | نظافة وصيانة منزلية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --deep: #103a3e;
+      --deep-2: #174b4e;
+      --teal: #159a8c;
+      --mint: #baf1db;
+      --cream: #fffaf0;
+      --sand: #f2eadc;
+      --ink: #183c40;
+      --muted: #6d8584;
+      --orange: #e58d43;
+      --white: #fff;
+      --shadow: 0 22px 60px rgba(13, 50, 49, .14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: "Cairo", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, calc(100% - 40px)); margin: auto; }
+
+    .announcement {
+      color: #e0f5eb;
+      background: var(--deep);
+      font-size: 12px;
+    }
+    .announcement .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 37px;
+      gap: 20px;
+    }
+    .announcement strong { color: var(--mint); }
+
+    header {
+      position: absolute;
+      z-index: 10;
+      top: 37px;
+      right: 0;
+      left: 0;
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,.17);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 82px;
+      gap: 22px;
+    }
+    .logo { display: flex; align-items: center; gap: 11px; }
+    .logo-symbol {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      place-items: center;
+      color: var(--deep);
+      background: var(--mint);
+      border-radius: 50% 50% 50% 8px;
+      font-size: 22px;
+      font-weight: 900;
+    }
+    .logo-name { line-height: 1.15; }
+    .logo-name b { display: block; font-size: 19px; }
+    .logo-name small { color: #b7dad1; font-size: 9px; letter-spacing: 1px; }
+    .nav-links { display: flex; gap: 30px; color: #d9eee7; font-size: 13px; font-weight: 700; }
+    .nav-links a { transition: color .25s ease; }
+    .nav-links a:hover { color: var(--mint); }
+    .nav-call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      color: var(--deep);
+      background: var(--mint);
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 800;
+      transition: transform .25s ease, background .25s ease;
+    }
+    .nav-call:hover { background: #d8ffec; transform: translateY(-2px); }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 730px;
+      padding: 176px 0 94px;
+      color: var(--white);
+      background:
+        linear-gradient(105deg, rgba(11, 45, 48, .91), rgba(20, 84, 78, .7)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=2000&q=85") center/cover;
+      overflow: hidden;
+    }
+    .hero::before {
+      position: absolute;
+      z-index: -1;
+      top: 8%;
+      left: -110px;
+      width: 400px;
+      height: 400px;
+      content: "";
+      border: 1px solid rgba(186,241,219,.19);
+      border-radius: 50%;
+      box-shadow: 0 0 0 60px rgba(186,241,219,.04), 0 0 0 120px rgba(186,241,219,.025);
+    }
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      right: -70px;
+      bottom: -145px;
+      width: 390px;
+      height: 390px;
+      content: "";
+      background: rgba(229,141,67,.13);
+      border-radius: 50%;
+      filter: blur(2px);
+    }
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      align-items: center;
+      gap: 80px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 6px 12px;
+      color: var(--mint);
+      background: rgba(186,241,219,.12);
+      border: 1px solid rgba(186,241,219,.26);
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .tag i {
+      width: 7px;
+      height: 7px;
+      background: var(--orange);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(229,141,67,.17);
+    }
+    h1 {
+      max-width: 660px;
+      font-size: clamp(42px, 5.8vw, 74px);
+      font-weight: 900;
+      letter-spacing: -2.4px;
+      line-height: 1.15;
+    }
+    h1 em { color: var(--mint); font-style: normal; }
+    .hero-copy {
+      max-width: 570px;
+      margin-top: 20px;
+      color: #d9ece8;
+      font-size: 16px;
+      line-height: 2;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 51px;
+      padding: 11px 22px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-mint { color: var(--deep); background: var(--mint); box-shadow: 0 13px 26px rgba(0,0,0,.14); }
+    .btn-mint:hover { background: #d8ffec; box-shadow: 0 17px 30px rgba(0,0,0,.2); }
+    .btn-outline { color: #edfff7; border: 1px solid rgba(255,255,255,.36); background: rgba(255,255,255,.08); }
+    .btn-outline:hover { background: rgba(255,255,255,.16); }
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 34px;
+      color: #b5d4ce;
+      font-size: 11px;
+    }
+    .hero-note b { color: var(--white); }
+    .note-check {
+      display: grid;
+      width: 25px;
+      height: 25px;
+      place-items: center;
+      color: var(--deep);
+      background: var(--mint);
+      border-radius: 8px;
+      font-weight: 900;
+    }
+
+    .service-card {
+      padding: 27px;
+      color: var(--ink);
+      background: rgba(255,250,240,.96);
+      border-radius: 25px 8px 25px 8px;
+      box-shadow: var(--shadow);
+      transform: rotate(1.5deg);
+    }
+    .card-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #e6dfd3;
+    }
+    .card-icon {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      place-items: center;
+      color: var(--deep);
+      background: var(--mint);
+      border-radius: 13px;
+      font-size: 20px;
+    }
+    .card-heading b { display: block; font-size: 17px; }
+    .card-heading small { color: var(--muted); font-size: 10px; }
+    .card-list { display: grid; gap: 11px; margin: 21px 0 24px; list-style: none; }
+    .card-list li { display: flex; align-items: center; gap: 10px; color: #456260; font-size: 12px; font-weight: 700; }
+    .card-list i {
+      display: grid;
+      width: 19px;
+      height: 19px;
+      flex: 0 0 auto;
+      place-items: center;
+      color: #168a72;
+      background: #dcf7e9;
+      border-radius: 50%;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 900;
+    }
+    .service-card .btn { width: 100%; background: var(--deep); color: #fff; }
+    .service-card .btn:hover { background: var(--deep-2); }
+    .card-footer { margin-top: 12px; color: #91a19a; text-align: center; font-size: 10px; }
+    .curve {
+      position: absolute;
+      right: -4%;
+      bottom: -1px;
+      left: -4%;
+      height: 71px;
+      background: var(--cream);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .section { padding: 100px 0; }
+    .heading { max-width: 620px; margin: 0 auto 43px; text-align: center; }
+    .kicker { display: block; margin-bottom: 10px; color: var(--teal); font-size: 11px; font-weight: 900; letter-spacing: 1px; }
+    h2 { color: var(--deep); font-size: clamp(30px, 4vw, 43px); line-height: 1.3; }
+    .heading p { margin-top: 12px; color: var(--muted); font-size: 14px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .service {
+      padding: 26px 23px;
+      background: #fff;
+      border: 1px solid #eee5d7;
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(38, 67, 57, .035);
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .service:hover { border-color: #a8deca; box-shadow: 0 17px 32px rgba(33, 105, 83, .11); transform: translateY(-7px); }
+    .service-icon {
+      display: grid;
+      width: 49px;
+      height: 49px;
+      margin-bottom: 17px;
+      place-items: center;
+      color: var(--teal);
+      background: #e4f7ec;
+      border-radius: 14px;
+      font-family: "Manrope", sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+    }
+    .service:nth-child(2) .service-icon { color: #4878ad; background: #eaf1fc; }
+    .service:nth-child(3) .service-icon { color: #bc7541; background: #fff0dc; }
+    .service:nth-child(4) .service-icon { color: #8354a6; background: #f1e7fb; }
+    .service:nth-child(5) .service-icon { color: #bd5b77; background: #ffe9ef; }
+    .service:nth-child(6) .service-icon { color: #4c8e87; background: #e1f6f3; }
+    .service h3 { color: var(--deep); font-size: 16px; }
+    .service p { margin-top: 6px; color: #748683; font-size: 12px; line-height: 1.9; }
+
+    .about {
+      background: #f0e9dc;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 80px;
+    }
+    .about-image {
+      position: relative;
+      min-height: 385px;
+      background:
+        linear-gradient(140deg, rgba(9,61,57,.12), rgba(10,53,52,.7)),
+        url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=85") center/cover;
+      border-radius: 9px 27px 9px 27px;
+      box-shadow: -18px 18px 0 rgba(21,154,140,.16), var(--shadow);
+    }
+    .image-badge {
+      position: absolute;
+      bottom: 22px;
+      right: 21px;
+      padding: 11px 16px;
+      color: var(--deep);
+      background: var(--mint);
+      border-radius: 11px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .image-badge b { display: block; font-size: 20px; line-height: 1.2; }
+    .about-copy .kicker { text-align: right; }
+    .about-copy h2 { max-width: 520px; }
+    .about-copy > p { margin-top: 18px; color: #687c78; font-size: 14px; line-height: 2.1; }
+    .advantages { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 26px; }
+    .advantage { display: flex; align-items: center; gap: 9px; color: var(--deep); font-size: 12px; font-weight: 800; }
+    .advantage i { display: grid; width: 27px; height: 27px; place-items: center; color: var(--teal); background: rgba(21,154,140,.12); border-radius: 8px; font-style: normal; }
+
+    .dark { color: #fff; background: var(--deep); }
+    .dark h2 { color: #fff; }
+    .dark .heading p { color: #b6d1cc; }
+    .numbers { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; border: 1px solid rgba(186,241,219,.18); border-radius: 19px; }
+    .number { padding: 27px 16px; background: rgba(255,255,255,.045); text-align: center; }
+    .number + .number { border-right: 1px solid rgba(186,241,219,.18); }
+    .number b { display: block; color: var(--mint); font-family: "Manrope", sans-serif; font-size: 33px; line-height: 1.2; }
+    .number span { display: block; margin-top: 7px; color: #b6d1cc; font-size: 11px; }
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      padding: 84px 0;
+      color: #fff;
+      background: linear-gradient(110deg, #166f68, #103a3e);
+    }
+    .contact::after {
+      position: absolute;
+      top: -220px;
+      left: -110px;
+      width: 500px;
+      height: 500px;
+      content: "";
+      border: 1px solid rgba(186,241,219,.16);
+      border-radius: 50%;
+      box-shadow: 0 0 0 55px rgba(186,241,219,.035);
+    }
+    .contact-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+    .contact h2 { color: #fff; }
+    .contact p { margin-top: 9px; color: #cce7df; font-size: 13px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+    .contact-actions .btn { min-width: 165px; }
+    .btn-whatsapp { color: #fff; background: #16b86d; }
+    .btn-whatsapp:hover { background: #0fa35f; }
+    .btn-call { color: var(--deep); background: var(--mint); }
+
+    footer {
+      padding: 27px 0 20px;
+      color: #91ada7;
+      background: #0a292c;
+      font-size: 11px;
+    }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-brand { color: #e7f7f0; font-size: 14px; font-weight: 800; }
+    .footer-brand span { color: var(--mint); }
+    .designer { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.11); text-align: center; }
+    .designer a { color: var(--mint); font-weight: 800; }
+
+    .floating {
+      position: fixed;
+      z-index: 20;
+      bottom: 19px;
+      left: 18px;
+      display: grid;
+      gap: 10px;
+    }
+    .floating-wrap { position: relative; }
+    .float {
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 9px 24px rgba(9, 38, 36, .25);
+      font-family: "Manrope", sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+      transition: transform .25s ease;
+    }
+    .float:hover { transform: scale(1.1) translateY(-2px); }
+    .float.wa { background: #16b86d; }
+    .float.tel { background: #217acb; }
+    .float-label {
+      position: absolute;
+      left: 65px;
+      top: 50%;
+      width: max-content;
+      padding: 4px 8px;
+      color: #fff;
+      background: var(--deep);
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-5px, -50%);
+      transition: opacity .2s ease, transform .2s ease;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .floating-wrap:hover .float-label { opacity: 1; transform: translate(0, -50%); }
+
+    @media (max-width: 850px) {
+      .nav-links { display: none; }
+      .hero { min-height: auto; padding-top: 153px; }
+      .hero-content { grid-template-columns: 1fr; gap: 45px; }
+      .service-card { width: min(440px, 100%); margin: auto; }
+      .about-grid { grid-template-columns: 1fr; gap: 52px; }
+      .about-image { width: min(620px, 100%); min-height: 320px; margin: auto; }
+      .contact-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 28px, 520px); }
+      .announcement { font-size: 10px; }
+      .announcement .container { min-height: 33px; }
+      header { top: 33px; }
+      .nav { min-height: 72px; }
+      .logo-symbol { width: 40px; height: 40px; font-size: 19px; }
+      .logo-name b { font-size: 16px; }
+      .logo-name small { font-size: 7px; }
+      .nav-call { padding: 8px 11px; font-size: 10px; }
+      .hero { padding: 140px 0 66px; }
+      h1 { font-size: 43px; letter-spacing: -1.5px; }
+      .hero-copy { font-size: 13px; line-height: 1.95; }
+      .actions { display: grid; }
+      .actions .btn { width: 100%; }
+      .curve { height: 42px; }
+      .section { padding: 72px 0; }
+      .heading { margin-bottom: 30px; }
+      h2 { font-size: 30px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service { padding: 23px 20px; }
+      .advantages { gap: 13px 7px; }
+      .advantage { font-size: 10px; }
+      .advantage i { width: 23px; height: 23px; }
+      .about-image { min-height: 275px; }
+      .numbers { grid-template-columns: 1fr 1fr; }
+      .number { padding: 22px 10px; }
+      .number:nth-child(3) { border-top: 1px solid rgba(186,241,219,.18); }
+      .number:nth-child(4) { border-top: 1px solid rgba(186,241,219,.18); }
+      .number b { font-size: 28px; }
+      .contact { padding: 67px 0; }
+      .contact-actions { display: grid; width: 100%; }
+      .contact-actions .btn { width: 100%; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+      .floating { bottom: 12px; left: 12px; }
+      .float { width: 48px; height: 48px; font-size: 18px; }
+      .float-label { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">
+    <div class="container">خدمات نظافة وصيانة منزلية متكاملة في <strong>الأحساء</strong> والمناطق المجاورة</div>
+  </div>
+
+  <header>
+    <nav class="container nav" aria-label="التنقل الرئيسي">
+      <a class="logo" href="#home" aria-label="الحمد كلين">
+        <span class="logo-symbol">ح</span>
+        <span class="logo-name"><b>الحمد كلين</b><small>نظافة • عناية • راحة</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
+      <a class="nav-call" href="tel:0590842766"><span>اتصل بنا</span><span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <span class="tag"><i></i> عناية تليق ببيتك</span>
+          <h1>بيتك أنظف،<br /><em>حياتك أهدأ</em></h1>
+          <p class="hero-copy">الحمد كلين لخدمات النظافة والصيانة المنزلية في الأحساء. نعتني بالتفاصيل الصغيرة لنمنحك مكانًا نظيفًا، صحيًا، ومريحًا كل يوم.</p>
+          <div class="actions">
+            <a class="btn btn-mint" href="tel:0590842766">اتصل واحجز خدمتك <span>←</span></a>
+            <a class="btn btn-outline" href="https://wa.me/966590842766?text=السلام%20عليكم،%20أرغب%20في%20طلب%20خدمة%20نظافة" target="_blank" rel="noopener">تحدث معنا عبر واتساب <span>↗</span></a>
+          </div>
+          <div class="hero-note"><span class="note-check">✓</span><span><b>خدمة مرتبة وموثوقة</b><br />نصل إليك بعناية واهتمام</span></div>
+        </div>
+
+        <aside class="service-card" aria-label="خدمات الحمد كلين">
+          <div class="card-heading">
+            <span class="card-icon">✦</span>
+            <div><b>راحة بيتك تبدأ من هنا</b><small>نخدمك في المكان والوقت المناسب</small></div>
+          </div>
+          <ul class="card-list">
+            <li><i>✓</i> تنظيف الفلل والشقق</li>
+            <li><i>✓</i> تنظيف المكيفات والخزانات</li>
+            <li><i>✓</i> مكافحة الحشرات</li>
+            <li><i>✓</i> تنظيف الكنب والسجاد</li>
+            <li><i>✓</i> تنظيف وصيانة الأفران</li>
+          </ul>
+          <a class="btn" href="tel:0590842766">اطلب الخدمة المناسبة لك <span>↗</span></a>
+          <div class="card-footer">فريق جاهز لخدمتك باهتمام</div>
+        </aside>
+      </div>
+      <div class="curve"></div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="heading">
+          <span class="kicker">خدماتنا المنزلية</span>
+          <h2>كل ما يحتاجه بيتك في مكان واحد</h2>
+          <p>خدمات متخصصة ننفذها بعناية، لتبقى مساحتك أجمل وأنظف وأكثر راحة.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service">
+            <div class="service-icon">⌂</div>
+            <h3>تنظيف الفلل والشقق</h3>
+            <p>تنظيف شامل للمنازل والمساحات الداخلية مع عناية بكل غرفة وتفصيلة.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">❄</div>
+            <h3>تنظيف المكيفات</h3>
+            <p>تنظيف وصيانة المكيفات للمساعدة على هواء أنقى وأداء أفضل.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">♒</div>
+            <h3>تنظيف الخزانات</h3>
+            <p>تنظيف وتعقيم الخزانات بعناية للمحافظة على نظافة المياه.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">✦</div>
+            <h3>مكافحة الحشرات</h3>
+            <p>حلول منظمة للتعامل مع الحشرات ومساعدة منزلك على البقاء أكثر أمانًا.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">▰</div>
+            <h3>تنظيف الكنب والسجاد</h3>
+            <p>تنظيف عميق للمفروشات وإزالة الأوساخ لتستعيد رونقها وانتعاشها.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">◇</div>
+            <h3>تنظيف وصيانة الأفران</h3>
+            <p>تنظيف دقيق وصيانة للأفران لتحافظ على نظافتها وأدائها.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <div class="image-badge"><b>بكل اهتمام</b>نعتني بمساحتك</div>
+        </div>
+        <div class="about-copy">
+          <span class="kicker">لماذا الحمد كلين؟</span>
+          <h2>نظافة تشعر بها من أول لحظة</h2>
+          <p>نحن نعرف أن المنزل النظيف يمنح العائلة راحة مختلفة. لذلك نعمل بجدية، وتنظيم، واهتمام بالتفاصيل، حتى تحصل على تجربة سهلة ونتيجة ترضيك.</p>
+          <div class="advantages">
+            <div class="advantage"><i>✓</i> فريق ملتزم ومحترف</div>
+            <div class="advantage"><i>✓</i> عناية بالتفاصيل</div>
+            <div class="advantage"><i>✓</i> أدوات مناسبة لكل خدمة</div>
+            <div class="advantage"><i>✓</i> تعامل راقٍ وواضح</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="container">
+        <div class="heading">
+          <span class="kicker">ثقة تتجدد</span>
+          <h2>نخدمك كما نحب أن نُخدم</h2>
+          <p>اهتمام حقيقي، ترتيب في العمل، وحرص على أن تكون كل زيارة تجربة مريحة.</p>
+        </div>
+        <div class="numbers">
+          <div class="number"><b>10+</b><span>سنوات من الخبرة</span></div>
+          <div class="number"><b>2500+</b><span>طلب تم إنجازه</span></div>
+          <div class="number"><b>98%</b><span>عملاء راضون</span></div>
+          <div class="number"><b>24/7</b><span>جاهزون لخدمتك</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div>
+          <h2>جاهز لبيت أنظف؟</h2>
+          <p>تواصل معنا الآن، ودعنا نساعدك في اختيار الخدمة المناسبة لك.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/966590842766?text=السلام%20عليكم،%20أرغب%20في%20طلب%20خدمة%20نظافة" target="_blank" rel="noopener">واتساب الآن <span>↗</span></a>
+          <a class="btn btn-call" href="tel:0590842766">0590842766 <span>☎</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-brand">الحمد <span>كلين</span> للنظافة والصيانة</div>
+        <div>الأحساء والمناطق المجاورة</div>
+        <a href="tel:0590842766">0590842766</a>
+      </div>
+      <div class="designer">تم التصميم بواسطة <a href="https://wa.me/201029095046?text=مرحبًا%20م.%20نجوى%20إبراهيم" target="_blank" rel="noopener">م. نجوى إبراهيم</a></div>
+    </div>
+  </footer>
+
+  <div class="floating" aria-label="خيارات التواصل السريع">
+    <div class="floating-wrap">
+      <span class="float-label">تواصل عبر واتساب</span>
+      <a class="float wa" href="https://wa.me/966590842766?text=السلام%20عليكم،%20أرغب%20في%20طلب%20خدمة%20نظافة" target="_blank" rel="noopener" aria-label="واتساب">◔</a>
+    </div>
+    <div class="floating-wrap">
+      <span class="float-label">اتصل الآن</span>
+      <a class="float tel" href="tel:0590842766" aria-label="اتصال">☎</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var target = document.querySelector(link.getAttribute("href"));
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
